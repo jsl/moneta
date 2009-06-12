@@ -22,12 +22,12 @@ module Moneta
     
       def [](key)
         if val = super
-          Marshal.load(val.unpack("m")[0])
+          Marshal.load(val)
         end
       end
     
       def []=(key, value)
-        super(key, [Marshal.dump(value)].pack("m"))
+        super(key, Marshal.dump(value))
       end    
     end
     
