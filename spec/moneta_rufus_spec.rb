@@ -5,8 +5,14 @@ begin
 
   describe "Moneta::Rufus" do
     before(:each) do
-      @cache = Moneta::Rufus.new(:file => "cache")
+      @file = File.join(File.dirname(__FILE__), 'cache')
+      @cache = Moneta::Rufus.new(:file => @file)
       @cache.clear
+    end
+  
+    after(:all) do
+      File.delete("#{@file}.tch")
+      File.delete("#{@file}_expires.tch")
     end
   
     it_should_behave_like "a read/write Moneta cache"
