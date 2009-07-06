@@ -37,5 +37,10 @@ module Moneta
       @expiration = BasicRufus.new(:file => "#{file}_expires")
       super
     end
+    
+    def close
+      @expiration.close
+      super
+    end
   end
 end
