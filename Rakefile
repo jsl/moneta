@@ -4,8 +4,8 @@ require 'rubygems/specification'
 require 'spec/rake/spectask'
 require 'date'
 
-GEM = "moneta"
-GEM_VERSION = "0.5.0"
+GEM = "jsl-moneta"
+GEM_VERSION = "0.6.3"
 AUTHOR = "Yehuda Katz"
 EMAIL = "wycats@gmail.com"
 HOMEPAGE = "http://www.yehudakatz.com"
